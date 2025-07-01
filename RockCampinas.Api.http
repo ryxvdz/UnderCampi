@@ -1,0 +1,6 @@
+@RockCampinas.Api_HostAddress = http://localhost:5182
+
+GET {{RockCampinas.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
