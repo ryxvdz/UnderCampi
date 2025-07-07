@@ -13,15 +13,15 @@ namespace RockCampinas.Api.Models
 
         [Required]
         [MaxLength(255)]
-        public required string Titulo { get; set; } // Adicione 'required' aqui
+        public required string Titulo { get; set; } 
 
         [Required]
-        public required string Descricao { get; set; } // Adicione 'required' aqui
+        public required string Descricao { get; set; } 
 
         public DateTime DataShow { get; set; }
 
         [MaxLength(255)]
-        public string? Local { get; set; } // Já estava anulável, ok
+        public string? Local { get; set; } 
 
         [MaxLength(255)]
         public string? Endereco { get; set; }

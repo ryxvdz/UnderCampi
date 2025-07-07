@@ -12,24 +12,24 @@ namespace RockCampinas.Api.Models
 
         [Required]
         [MaxLength(100)]
-        public required string Nome { get; set; } // Adicione 'required' aqui
+        public required string Nome { get; set; } 
 
         [Required]
         [EmailAddress]
         [MaxLength(255)]
-        public required string Email { get; set; } // Adicione 'required' aqui
+        public required string Email { get; set; } 
 
         [Required]
         [MaxLength(255)]
-        public required string SenhaHash { get; set; } // Adicione 'required' aqui
+        public required string SenhaHash { get; set; } 
 
         [Required]
         [MaxLength(255)]
-        public required string Salt { get; set; } // Adicione 'required' aqui
+        public required string Salt { get; set; } 
 
         [Required]
         [MaxLength(50)]
-        public required string Role { get; set; } // Adicione 'required' aqui
+        public required string Role { get; set; } 
 
         public DateTime DataCriacao { get; set; } = DateTime.UtcNow;
 
