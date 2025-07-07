@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RockCampinas.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7fd8b2e5b8f8fdb53a1fe79a44abb924edd52783")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8216520451d6d53f7995a7896c419beeabf44f7")]
 [assembly: System.Reflection.AssemblyProductAttribute("RockCampinas.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RockCampinas.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

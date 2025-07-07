@@ -5,11 +5,25 @@ using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins", 
+        builder => builder.AllowAnyOrigin() 
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
+});
+
+
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
-builder.Services.AddControllers(); // Habilita o uso de controladores 
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
 
 // Configuração do Swagger/OpenAPI (para testar  APIs)
 builder.Services.AddEndpointsApiExplorer();
@@ -32,18 +46,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Redireciona requisições HTTP para HTTPS 
+
 app.UseHttpsRedirection();
 
-
-app.UseRouting(); 
-
+app.UseCors("AllowAllOrigins"); 
 
 
+
+app.UseRouting();
 
 app.MapControllers();
-
-
-
-
-app.Run(); 
+app.Run();
